@@ -1,0 +1,38 @@
+{
+  "name": "internproof-ai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "InternProof AI — A Complete, Production-Ready Student Internship Intelligence Platform",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces",
+    "build:shared": "npm run build --workspace=packages/shared",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:web": "npm run build --workspace=apps/web",
+    "test": "vitest run",
+    "db:generate": "npm run db:generate --workspace=apps/api",
+    "db:push": "npm run db:push --workspace=apps/api",
+    "db:seed": "npm run db:seed --workspace=apps/api",
+    "lint": "npm run lint --workspaces"
+  },
+  "keywords": [
+    "internship",
+    "career-intelligence",
+    "student-assist",
+    "readiness-engine",
+    "ai-mentor",
+    "resume-studio"
+  ],
+  "author": "InternProof AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.3.1"
+  }
+}
