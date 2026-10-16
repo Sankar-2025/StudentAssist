@@ -1,4 +1,4 @@
-const BASE_URL = '/api';
+const BASE_URL = 'https://studentassist-api-xjkw.onrender.com/api';
 
 export class ApiError extends Error {
   status: number;
