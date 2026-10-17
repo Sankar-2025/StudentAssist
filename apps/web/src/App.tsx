@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar';
 // Pages
 import { Dashboard } from './pages/Dashboard';
 import { Discover } from './pages/Discover';
+import Scholarships from './pages/Scholarships';
 import { PersonalizedMatches } from './pages/PersonalizedMatches';
 import { Roadmaps } from './pages/Roadmaps';
 import { Assessments } from './pages/Assessments';
@@ -84,6 +85,7 @@ export const App: React.FC = () => {
             <Route element={<AppLayout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/discover" element={<Discover />} />
+              <Route path="/scholarships" element={<Scholarships />} />
               <Route path="/matches" element={<PersonalizedMatches />} />
               <Route path="/roadmaps" element={<Roadmaps />} />
               <Route path="/assessments" element={<Assessments />} />

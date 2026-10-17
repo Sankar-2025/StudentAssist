@@ -44,6 +44,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { name: 'Discover Internships', path: '/discover', icon: Compass },
     { name: 'Personalized Matches', path: '/matches', icon: Sparkles, badge: 'AI' },
     { name: 'Skill Roadmaps', path: '/roadmaps', icon: Map },
+    { name: 'Government Scholarships', path: '/scholarships', icon: GraduationCap },
     { name: 'Skill Assessments', path: '/assessments', icon: GraduationCap },
     { name: 'Interview Lab', path: '/interview-lab', icon: HelpCircle },
     { name: 'AI Career Mentor', path: '/mentor', icon: Bot },
