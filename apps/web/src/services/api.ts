@@ -1,8 +1,15 @@
-const BASE_URL =
-  import.meta.env.VITE_API_URL ||
-  (import.meta.env.PROD
-    ? 'https://studentassist-api-xjkw.onrender.com/api'
-    : '/api');
+function getBaseUrl(): string {
+  const envUrl = (import.meta.env.VITE_API_URL || '').trim();
+  if (envUrl) {
+    const clean = envUrl.replace(/\/+$/, '');
+    return clean.endsWith('/api') ? clean : `${clean}/api`;
+  }
+  return import.meta.env.PROD
+    ? 'https://studentassist-2ui5.onrender.com/api'
+    : '/api';
+}
+
+const BASE_URL = getBaseUrl();
 
 export class ApiError extends Error {
   status: number;
