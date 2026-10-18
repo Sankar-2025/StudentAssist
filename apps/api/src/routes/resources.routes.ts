@@ -52,6 +52,66 @@ const CURATED_RESOURCES = [
     disclaimer: 'Always refer to the official Amazon Student Programs email for assessment instructions.',
     category: 'Behavioral & Leadership',
   },
+{
+  id: 'infosys-internship-interviews',
+  company: 'Infosys',
+  title: 'Infosys Internship Interview Experiences',
+  role: 'Internship',
+  category: 'Previous Interview Experiences',
+  description: 'Explore student-shared Infosys internship interview experiences, technical questions, and selection rounds.',
+  channel: 'YouTube search',
+  directSearchUrl: 'https://www.youtube.com/results?search_query=Infosys+internship+interview+experience',
+  videoUrl: 'https://www.youtube.com/results?search_query=Infosys+internship+interview+experience',
+  disclaimer: 'These are search results, not individually verified interview experiences.'
+},
+{
+  id: 'cognizant-internship-interviews',
+  company: 'Cognizant',
+  title: 'Cognizant Internship Interview Experiences',
+  role: 'Internship',
+  category: 'Previous Interview Experiences',
+  description: 'Find internship interview walkthroughs covering aptitude, technical rounds, and HR discussions.',
+  channel: 'YouTube search',
+  directSearchUrl: 'https://www.youtube.com/results?search_query=Cognizant+internship+interview+experience',
+  videoUrl: 'https://www.youtube.com/results?search_query=Cognizant+internship+interview+experience',
+  disclaimer: 'These are search results, not individually verified interview experiences.'
+},
+{
+  id: 'tcs-internship-interviews',
+  company: 'TCS',
+  title: 'TCS Internship Interview Experiences',
+  role: 'Internship',
+  category: 'Previous Interview Experiences',
+  description: 'Explore TCS internship interview discussions, coding questions, and technical selection rounds.',
+  channel: 'YouTube search',
+  directSearchUrl: 'https://www.youtube.com/results?search_query=TCS+internship+interview+experience',
+  videoUrl: 'https://www.youtube.com/results?search_query=TCS+internship+interview+experience',
+  disclaimer: 'These are search results, not individually verified interview experiences.'
+},
+{
+  id: 'wipro-internship-interviews',
+  company: 'Wipro',
+  title: 'Wipro Internship Interview Experiences',
+  role: 'Internship',
+  category: 'Previous Interview Experiences',
+  description: 'Find Wipro internship interview experiences, coding preparation videos, and technical round discussions.',
+  channel: 'YouTube search',
+  directSearchUrl: 'https://www.youtube.com/results?search_query=Wipro+internship+interview+experience',
+  videoUrl: 'https://www.youtube.com/results?search_query=Wipro+internship+interview+experience',
+  disclaimer: 'These are search results, not individually verified interview experiences.'
+},
+{
+  id: 'zoho-internship-interviews',
+  company: 'Zoho',
+  title: 'Zoho Internship Interview Experiences',
+  role: 'Internship',
+  category: 'Previous Interview Experiences',
+  description: 'Explore Zoho internship interview experiences, programming problems, and technical interview preparation.',
+  channel: 'YouTube search',
+  directSearchUrl: 'https://www.youtube.com/results?search_query=Zoho+internship+interview+experience',
+  videoUrl: 'https://www.youtube.com/results?search_query=Zoho+internship+interview+experience',
+  disclaimer: 'These are search results, not individually verified interview experiences.'
+}
 ];
 
 // GET /api/resources/videos

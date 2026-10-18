@@ -111,11 +111,18 @@ export const LearningResources: React.FC = () => {
             onChange={(e) => setSelectedCompany(e.target.value)}
             className="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-semibold"
           >
-            <option value="ALL">All Companies</option>
-            <option value="Google">Google</option>
-            <option value="Microsoft">Microsoft</option>
-            <option value="Meta">Meta</option>
-            <option value="Amazon">Amazon</option>
+         
+<option value="ALL">All Companies</option>
+<option value="Google">Google</option>
+<option value="Microsoft">Microsoft</option>
+<option value="Meta">Meta</option>
+<option value="Amazon">Amazon</option>
+<option value="Infosys">Infosys</option>
+<option value="Cognizant">Cognizant</option>
+<option value="TCS">TCS</option>
+<option value="Wipro">Wipro</option>
+<option value="Zoho">Zoho</option>
+
           </select>
         </div>
       </div>

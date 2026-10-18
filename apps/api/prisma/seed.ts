@@ -602,13 +602,20 @@ async function main() {
         },
       });
 
-      // Seed saved internship
-      await prisma.savedInternship.create({
-        data: {
-          userId: studentUser.id,
-          internshipId: firstInternship.id,
-        },
-      });
+     // Seed saved internship (avoid duplicates when seeding again)
+await prisma.savedInternship.upsert({
+  where: {
+    userId_internshipId: {
+      userId: studentUser.id,
+      internshipId: firstInternship.id,
+    },
+  },
+  update: {},
+  create: {
+    userId: studentUser.id,
+    internshipId: firstInternship.id,
+  },
+});
     }
 
     // Seed notification preferences & welcome notification

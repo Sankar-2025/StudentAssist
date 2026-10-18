@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ResumeEnhancements from '../components/ResumeEnhancements';
 import {
   FileText,
   Printer,
@@ -312,6 +313,13 @@ export const ResumeStudio: React.FC = () => {
               className="w-full p-2.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 leading-relaxed"
             />
           </div>
+          {/* Resume Section Manager */}
+<ResumeEnhancements
+  sections={activeResume.sections || []}
+  onChange={(sections) =>
+    setActiveResume({ ...activeResume, sections })
+  }
+/>
         </div>
 
         {/* Right Column: Live Printable Preview Pane */}
@@ -343,7 +351,9 @@ export const ResumeStudio: React.FC = () => {
             </div>
 
             {/* Sections (Education, Projects, Skills) */}
-            {(activeResume.sections || []).map((sec: any) => (
+            {(activeResume.sections || [])
+           .filter((sec: any) => !sec.hidden)
+           .map((sec: any) => (
               <div key={sec.id} className="space-y-2">
                 <h2 className="font-bold uppercase tracking-wider text-[11px] text-brand-700 border-b border-slate-200 pb-0.5">
                   {sec.title}
@@ -395,6 +405,46 @@ export const ResumeStudio: React.FC = () => {
                     ))}
                   </div>
                 )}
+                
+{/* Additional resume sections */}
+{!['EDUCATION', 'PROJECTS', 'SKILLS'].includes(sec.sectionType) && (
+  <div className="space-y-2">
+    {(sec.items || []).map((item: any, iIdx: number) => (
+      <div key={iIdx} className="space-y-1">
+        {Object.entries(item).map(([key, value]: [string, any]) => {
+          if (
+            value === undefined ||
+            value === null ||
+            value === '' ||
+            key === 'id' ||
+            key === 'hidden'
+          ) {
+            return null;
+          }
+
+          const label = key
+            .replace(/([A-Z])/g, ' $1')
+            .replace(/^./, (letter) => letter.toUpperCase());
+
+          const displayValue = Array.isArray(value)
+            ? value.join(' • ')
+            : String(value);
+
+          return (
+            <p key={key} className="text-slate-700 leading-relaxed">
+              <strong className="font-semibold text-slate-900">
+                {['name', 'company', 'institution', 'organization', 'role'].includes(key)
+                  ? ''
+                  : `${label}: `}
+              </strong>
+              {displayValue}
+            </p>
+          );
+        })}
+      </div>
+    ))}
+  </div>
+)}
               </div>
             ))}
           </div>
