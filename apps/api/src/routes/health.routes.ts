@@ -20,7 +20,7 @@ router.get('/', async (req: Request, res: Response) => {
   return res.json({
     status: dbStatus === 'healthy' ? 'pass' : 'warn',
     timestamp: new Date().toISOString(),
-    service: 'internproof-api',
+    service: 'studentassist-api',
     uptimeSeconds: Math.round(process.uptime()),
     database: {
       status: dbStatus,

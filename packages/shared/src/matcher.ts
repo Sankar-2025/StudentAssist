@@ -1,5 +1,5 @@
 // ==============================================================================
-// InternProof AI — Explainable Match Score & Skill Gap Analysis Engine
+// StudentAssist — Explainable Match Score & Skill Gap Analysis Engine
 // ==============================================================================
 
 import {

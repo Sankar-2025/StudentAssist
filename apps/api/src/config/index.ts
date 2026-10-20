@@ -16,7 +16,7 @@ export const config = {
   anthropicApiKey: process.env.ANTHROPIC_API_KEY || '',
   vapidPublicKey: process.env.VAPID_PUBLIC_KEY || '',
   vapidPrivateKey: process.env.VAPID_PRIVATE_KEY || '',
-  vapidSubject: process.env.VAPID_SUBJECT || 'mailto:admin@internproof.ai',
+  vapidSubject: process.env.VAPID_SUBJECT || 'mailto:admin@studentassist.com',
   rateLimitWindowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000', 10), // 15 mins
   rateLimitMaxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '300', 10),
 };

@@ -172,7 +172,7 @@ return {
 - Target Companies: ${studentProfile.targetCompanies || 'Tech companies'}`
       : 'No student profile context available.';
 
-    const systemPrompt = `You are the InternProof AI Career Mentor. You assist college students and aspiring software/AI engineers in planning their careers, closing skill gaps, preparing for technical interviews, and applying for top internships.
+    const systemPrompt = `You are the StudentAssist Career Mentor. You assist college students and aspiring software/AI engineers in planning their careers, closing skill gaps, preparing for technical interviews, and applying for top internships.
 Guidelines:
 1. Always be realistic, encouraging, and actionable.
 2. Provide step-by-step guidance, sample bullet points, or frameworks.
@@ -291,7 +291,7 @@ ${currentInternshipTitle ? `Active Internship Context: ${currentInternshipTitle}
     const greeting = /^(hi|hello|hey|hiya|good morning|good afternoon|good evening)[!. ,]*$/i;
 
 if (greeting.test(prompt.trim())) {
-  return "Hi! 👋 I'm your InternProof AI Career Mentor. I can help you build a career roadmap, improve your resume, prepare for interviews, or find suitable internships. What would you like to work on today?";
+  return "Hi! 👋 I'm your StudentAssist Career Mentor. I can help you build a career roadmap, improve your resume, prepare for interviews, or find suitable internships. What would you like to work on today?";
 }
     const role = profile?.targetRole || 'Software Engineer';
 

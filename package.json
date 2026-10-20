@@ -2,7 +2,7 @@
   "name": "internproof-ai-monorepo",
   "version": "1.0.0",
   "private": true,
-  "description": "InternProof AI — A Complete, Production-Ready Student Internship Intelligence Platform",
+  "description": "StudentAssist — A Complete, Production-Ready Student Internship Intelligence Platform",
   "workspaces": [
     "packages/*",
     "apps/*"
@@ -29,7 +29,7 @@
     "ai-mentor",
     "resume-studio"
   ],
-  "author": "InternProof AI Team",
+  "author": "StudentAssist Team",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^26.6.5",

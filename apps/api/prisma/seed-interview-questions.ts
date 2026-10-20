@@ -212,7 +212,7 @@ async function main() {
         sampleAnswerOutline: item.sampleAnswerOutline,
         companyTarget: null,
         isFromCandidateReport: false,
-        sourceAttribution: "InternProof AI starter question bank",
+        sourceAttribution: "StudentAssist starter question bank",
       },
     });
 

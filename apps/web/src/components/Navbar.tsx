@@ -1,8 +1,9 @@
 import React from 'react';
-import { Menu, Bell, GraduationCap, Sun, Moon } from 'lucide-react';
+import { Menu, Bell, Sun, Moon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
+import { StudentAssistLogo } from './StudentAssistLogo';
 
 interface NavbarProps {
   onToggleSidebar: () => void;
@@ -25,11 +26,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar, unreadCount = 0
         </button>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <div className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
-            <GraduationCap className="w-5 h-5" />
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white">
+            <StudentAssistLogo className="w-5 h-5 text-white" />
           </div>
           <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-slate-100">
-            InternProof AI
+            StudentAssist
           </span>
         </div>
       </div>

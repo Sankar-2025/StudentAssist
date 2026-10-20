@@ -1,6 +1,6 @@
-# InternProof AI — Automated Test Suite & QA Verification
+# StudentAssist — Automated Test Suite & QA Verification
 
-InternProof AI incorporates real automated testing covering units, integration endpoints, and cybersecurity access boundaries.
+StudentAssist incorporates real automated testing covering units, integration endpoints, and cybersecurity access boundaries.
 
 ---
 

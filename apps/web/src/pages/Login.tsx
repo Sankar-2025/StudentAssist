@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { GraduationCap, Lock, Mail, ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { Lock, Mail, ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { StudentAssistLogo } from '../components/StudentAssistLogo';
 import { useAuth } from '../context/AuthContext';
 
 export const Login: React.FC = () => {
@@ -46,11 +47,11 @@ export const Login: React.FC = () => {
       <div className="w-full max-w-md space-y-6">
         {/* Brand Logo & Title */}
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white mx-auto shadow-lg shadow-brand-500/20">
-            <GraduationCap className="w-7 h-7" />
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white mx-auto shadow-md shadow-brand-600/20">
+            <StudentAssistLogo className="w-7 h-7 text-white" />
           </div>
           <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100">
-            Sign In to InternProof AI
+            Sign In to StudentAssist
           </h1>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             Your comprehensive student internship readiness & career intelligence platform.

@@ -1,4 +1,4 @@
-# InternProof AI — Student Internship Intelligence & Readiness Platform
+# StudentAssist — Student Internship Intelligence & Readiness Platform
 
 > A complete, production-ready full-stack software intelligence platform designed for college students and early-career tech professionals (Software Engineers, AI/ML Engineers, Cloud Architects, Data Scientists).
 

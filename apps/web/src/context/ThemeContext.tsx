@@ -13,7 +13,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
-    const saved = localStorage.getItem('internproof_theme') as Theme;
+    const saved = (localStorage.getItem('studentassist_theme') || localStorage.getItem('internproof_theme')) as Theme;
     return saved || 'system';
   });
 
@@ -50,7 +50,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   }, [theme]);
 
   const setTheme = (newTheme: Theme) => {
-    localStorage.setItem('internproof_theme', newTheme);
+    localStorage.setItem('studentassist_theme', newTheme);
     setThemeState(newTheme);
   };
 

@@ -32,7 +32,7 @@ const AppLayout: React.FC = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950 text-xs text-slate-500 font-medium">
-        Loading InternProof AI...
+        Loading StudentAssist...
       </div>
     );
   }
@@ -42,8 +42,7 @@ const AppLayout: React.FC = () => {
   }
 
   return (
-
-<div className="flex h-screen overflow-hidden font-sans bg-[#F3F8F4] text-slate-800">
+    <div className="flex h-screen overflow-hidden font-sans bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block h-full flex-shrink-0">
         <Sidebar />

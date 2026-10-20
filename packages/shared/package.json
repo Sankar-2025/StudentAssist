@@ -1,7 +1,7 @@
 {
   "name": "@internproof/shared",
   "version": "1.0.0",
-  "description": "Shared models, types, and constants for InternProof AI",
+  "description": "Shared models, types, and constants for StudentAssist",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

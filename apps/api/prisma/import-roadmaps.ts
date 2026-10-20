@@ -9,7 +9,7 @@ async function main() {
   const filePath = resolve(process.cwd(), 'roadmaps-export.json');
   const data = JSON.parse(readFileSync(filePath, 'utf8'));
 
-  if (data.roadmaps.length !== 2 || data.steps.length !== 6) {
+  if (!data.roadmaps || !data.steps || data.roadmaps.length === 0) {
     throw new Error('Unexpected export counts. Import cancelled.');
   }
 

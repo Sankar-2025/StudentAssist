@@ -1,7 +1,7 @@
 {
   "name": "@internproof/web",
   "version": "1.0.0",
-  "description": "InternProof AI Frontend SaaS Application",
+  "description": "StudentAssist Frontend SaaS Application",
   "type": "module",
   "scripts": {
     "dev": "vite",

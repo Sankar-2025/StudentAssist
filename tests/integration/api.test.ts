@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll } from 'vitest';
 import request from 'supertest';
 import app from '../../apps/api/src/app';
 
-describe('InternProof AI REST API & Security Isolation Tests', () => {
+describe('StudentAssist REST API & Security Isolation Tests', () => {
   it('GET /api/health returns system health and DB status', async () => {
     const res = await request(app).get('/api/health');
     expect(res.status).toBe(200);

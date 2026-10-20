@@ -1,4 +1,4 @@
-# InternProof AI — REST API Documentation
+# StudentAssist — REST API Documentation
 
 All API endpoints are prefixed with `/api`. Authenticated endpoints accept either a `Bearer <token>` HTTP header or an `HttpOnly` session cookie.
 

@@ -1,8 +1,8 @@
-# InternProof AI — System Architecture & Intelligence Engine
+# StudentAssist — System Architecture & Intelligence Engine
 
 ## 1. High-Level Architecture Overview
 
-InternProof AI is designed as a modular, secure, high-performance monorepo platform tailored for college students and early-career software/AI engineers.
+StudentAssist is designed as a modular, secure, high-performance monorepo platform tailored for college students and early-career software/AI engineers.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -28,7 +28,7 @@ InternProof AI is designed as a modular, secure, high-performance monorepo platf
 
 ## 2. Internship Readiness Intelligence Engine
 
-The core signature capability of InternProof AI is the **Internship Readiness Intelligence Engine**. Rather than relying on black-box opacity or keyword matching, it computes a transparent, explainable match score (0 - 100%) grounded in five documented factors:
+The core signature capability of StudentAssist is the **Internship Readiness Intelligence Engine**. Rather than relying on black-box opacity or keyword matching, it computes a transparent, explainable match score (0 - 100%) grounded in five documented factors:
 
 ### Factor Weight Distribution:
 1. **Skill Alignment (40%)**:

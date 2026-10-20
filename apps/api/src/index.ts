@@ -6,7 +6,7 @@ const stopCollector = scheduleInternshipCollector();
 
 const server = app.listen(config.port, () => {
   console.log(`====================================================`);
-  console.log(`🚀 InternProof AI API Server is running!`);
+  console.log(`🚀 StudentAssist API Server is running!`);
   console.log(`📡 URL: http://localhost:${config.port}`);
   console.log(`🌍 Environment: ${config.env}`);
   console.log(`🛡️ CORS Origin: ${config.clientUrl}`);

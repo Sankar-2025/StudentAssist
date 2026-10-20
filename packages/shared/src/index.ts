@@ -1,5 +1,5 @@
 // ==============================================================================
-// InternProof AI — Shared Domain Types, Constants, and Match Engine Contracts
+// StudentAssist — Shared Domain Types, Constants, and Match Engine Contracts
 // ==============================================================================
 
 export enum VerificationStatus {

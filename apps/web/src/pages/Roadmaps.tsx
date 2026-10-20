@@ -9,6 +9,7 @@ import {
   Layers,
   ChevronDown,
   ChevronUp,
+  PlayCircle,
 } from 'lucide-react';
 import { api } from '../services/api';
 
@@ -246,33 +247,75 @@ export const Roadmaps: React.FC = () => {
                         )}
                       </div>
 
-                      {/* Verified Resources List */}
-                      {step.resources && step.resources.length > 0 && (
+                      {/* Skill Training Videos */}
+                      {step.resources && step.resources.some((r: any) => r.type?.toUpperCase() === 'VIDEO') && (
                         <div className="space-y-2">
                           <span className="font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
-                            <BookOpen className="w-3.5 h-3.5 text-brand-600" />
-                            Curated Official Documentation & Guides:
+                            <PlayCircle className="w-4 h-4 text-rose-500" />
+                            Skill Training Videos & Video Masterclasses:
                           </span>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {step.resources.map((res: any, rIdx: number) => (
-                              <a
-                                key={rIdx}
-                                href={res.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 hover:border-brand-500 transition flex items-center justify-between group"
-                              >
-                                <div className="truncate pr-2">
-                                  <p className="font-semibold text-slate-800 dark:text-slate-200 group-hover:text-brand-600 dark:group-hover:text-brand-400 truncate">
-                                    {res.title}
-                                  </p>
-                                  <p className="text-[11px] text-slate-400 truncate">
-                                    {res.provider} • {res.type}
-                                  </p>
-                                </div>
-                                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-500 flex-shrink-0" />
-                              </a>
-                            ))}
+                            {step.resources
+                              .filter((r: any) => r.type?.toUpperCase() === 'VIDEO')
+                              .map((res: any, rIdx: number) => (
+                                <a
+                                  key={rIdx}
+                                  href={res.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-3 rounded-xl border border-rose-100 dark:border-rose-950/60 bg-rose-50/30 dark:bg-rose-950/20 hover:border-rose-400 dark:hover:border-rose-700 transition flex items-center justify-between group"
+                                >
+                                  <div className="truncate pr-2">
+                                    <div className="flex items-center gap-1.5">
+                                      <span className="px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-rose-500 text-white">
+                                        Video Course
+                                      </span>
+                                      <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium truncate">
+                                        {res.provider}
+                                      </span>
+                                    </div>
+                                    <p className="font-bold text-xs text-slate-900 dark:text-slate-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 truncate mt-1">
+                                      {res.title}
+                                    </p>
+                                  </div>
+                                  <div className="w-7 h-7 rounded-lg bg-rose-500 text-white flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm">
+                                    <PlayCircle className="w-4 h-4" />
+                                  </div>
+                                </a>
+                              ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Curated Official Documentation & Guides */}
+                      {step.resources && step.resources.some((r: any) => r.type?.toUpperCase() !== 'VIDEO') && (
+                        <div className="space-y-2">
+                          <span className="font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
+                            <BookOpen className="w-3.5 h-3.5 text-brand-600 dark:text-brand-400" />
+                            Curated Official Documentation & Technical Guides:
+                          </span>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            {step.resources
+                              .filter((r: any) => r.type?.toUpperCase() !== 'VIDEO')
+                              .map((res: any, rIdx: number) => (
+                                <a
+                                  key={rIdx}
+                                  href={res.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 hover:border-brand-500 transition flex items-center justify-between group"
+                                >
+                                  <div className="truncate pr-2">
+                                    <p className="font-semibold text-slate-800 dark:text-slate-200 group-hover:text-brand-600 dark:group-hover:text-brand-400 truncate">
+                                      {res.title}
+                                    </p>
+                                    <p className="text-[11px] text-slate-400 truncate">
+                                      {res.provider} • {res.type}
+                                    </p>
+                                  </div>
+                                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-500 flex-shrink-0" />
+                                </a>
+                              ))}
                           </div>
                         </div>
                       )}

@@ -1,6 +1,6 @@
-# InternProof AI — Security Architecture & Verification
+# StudentAssist — Security Architecture & Verification
 
-InternProof AI treats cybersecurity and student data privacy as core architectural requirements, rigorously implementing protections against the OWASP Top 10 vulnerabilities.
+StudentAssist treats cybersecurity and student data privacy as core architectural requirements, rigorously implementing protections against the OWASP Top 10 vulnerabilities.
 
 ---
 

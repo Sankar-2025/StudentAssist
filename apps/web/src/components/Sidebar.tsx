@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
+import { StudentAssistLogo } from './StudentAssistLogo';
 
 interface SidebarProps {
   unreadNotificationsCount?: number;
@@ -63,16 +64,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <aside className="w-64 h-full flex flex-col justify-between bg-white border-r border-[#DCE8DE] select-none">
+    <aside className="w-64 h-full flex flex-col justify-between bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 select-none">
       <div className="flex flex-col flex-1 overflow-y-auto">
         {/* Brand Header */}
         <div className="flex items-center gap-3 px-6 py-5 border-b border-slate-100 dark:border-slate-800">
-          {/* Logo container flipped from Indigo gradient to pure Solid Green */}
-          <div className="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white shadow-md shadow-brand-600/20">
-            <GraduationCap className="w-6 h-6" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-600/20">
+            <StudentAssistLogo className="w-6 h-6 text-white" />
           </div>
           <div>
-            {/* Header text color changed to unified brand green */}
             <span className="font-extrabold text-lg tracking-tight text-brand-700 dark:text-brand-400">
               StudentAssist
             </span>
@@ -107,7 +106,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               className={({ isActive }) =>
                 `flex items-center justify-between px-3 py-2 rounded-lg text-xs font-semibold transition ${
                   isActive
-                    ? 'bg-brand-50 text-brand-800 border border-brand-100'
+                    ? 'bg-brand-50 text-brand-800 border border-brand-200 dark:bg-brand-950/60 dark:text-brand-300 dark:border-brand-800/50'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-brand-700 dark:hover:text-slate-100'
                 }`
               }

@@ -1,4 +1,4 @@
-# Multi-stage Dockerfile for InternProof AI
+# Multi-stage Dockerfile for StudentAssist
 FROM node:20-alpine AS base
 WORKDIR /app
 

@@ -82,7 +82,7 @@ export const Dashboard: React.FC = () => {
   return (
     <div className="space-y-8 pb-12 animate-in fade-in duration-200">
       {/* Welcome Banner */}
-      <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-green-700 via-emerald-700 to-green-900 text-white shadow-xl relative overflow-hidden">
+      <div className="p-6 md:p-8 rounded-2xl bg-slate-900 border border-slate-800 text-white shadow-sm relative overflow-hidden">
         <div className="relative z-10 max-w-2xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-brand-100 border border-white/20">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
@@ -115,13 +115,12 @@ export const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* Decorative background shape */}
-        <div className="absolute -right-10 -bottom-10 w-72 h-72 bg-white/5 rounded-full blur-2xl pointer-events-none" />
+
       </div>
 
       {/* KPI Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-5 rounded-xl bg-white border border-green-100 shadow-sm space-y-2">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
           <div className="flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
             <span>Readiness Top Match</span>
             <Sparkles className="w-4 h-4 text-brand-500" />

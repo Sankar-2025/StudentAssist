@@ -1,6 +1,6 @@
-# InternProof AI — Deployment & Infrastructure Guide
+# StudentAssist — Deployment & Infrastructure Guide
 
-This guide covers deploying InternProof AI across local, containerized, and production cloud environments.
+This guide covers deploying StudentAssist across local, containerized, and production cloud environments.
 
 ---
 
@@ -67,7 +67,7 @@ While SQLite provides immediate zero-config execution locally, production deploy
 - **Build Command:** `npm run build`
 - **Output Directory:** `dist`
 - **Environment Variables:**
-  - `VITE_API_URL`: URL of your backend API (e.g. `https://api.internproof.ai`)
+  - `VITE_API_URL`: URL of your backend API (e.g. `https://api.studentassist.com`)
 
 ### Backend API (Railway / Render / AWS ECS / Fly.io)
 - **Root Directory:** Project root or `apps/api`
@@ -76,7 +76,7 @@ While SQLite provides immediate zero-config execution locally, production deploy
 - **Environment Variables:**
   - `NODE_ENV=production`
   - `PORT=5000`
-  - `CLIENT_URL=https://app.internproof.ai`
+  - `CLIENT_URL=https://app.studentassist.com`
   - `DATABASE_URL=postgresql://...`
   - `JWT_SECRET=<secure_random_32_char_string>`
   - `GEMINI_API_KEY=<optional_gemini_key>`

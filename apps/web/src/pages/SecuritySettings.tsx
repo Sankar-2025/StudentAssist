@@ -87,7 +87,7 @@ export const SecuritySettings: React.FC = () => {
         const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(res, null, 2));
         const downloadAnchor = document.createElement('a');
         downloadAnchor.setAttribute('href', dataStr);
-        downloadAnchor.setAttribute('download', `internproof_data_export_${new Date().toISOString().slice(0, 10)}.json`);
+        downloadAnchor.setAttribute('download', `studentassist_data_export_${new Date().toISOString().slice(0, 10)}.json`);
         document.body.appendChild(downloadAnchor);
         downloadAnchor.click();
         downloadAnchor.remove();
@@ -210,7 +210,7 @@ export const SecuritySettings: React.FC = () => {
           GDPR Data Portability & Complete Export
         </h2>
         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-          Download a machine-readable JSON archive containing all your personal data stored on InternProof AI, including your profile, tracked applications, interview practice transcripts, resumes, and audit history.
+          Download a machine-readable JSON archive containing all your personal data stored on StudentAssist, including your profile, tracked applications, interview practice transcripts, resumes, and audit history.
         </p>
         <button
           onClick={handleExportData}

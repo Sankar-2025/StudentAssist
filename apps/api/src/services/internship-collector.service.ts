@@ -44,7 +44,7 @@ async function fetchSourcePage(rawUrl: string): Promise<{ text: string; contentT
   const response = await fetch(url, {
     redirect: 'manual',
     signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-    headers: { 'user-agent': 'InternProofAI-InternshipCollector/1.0 (+official-source-monitor)', accept: 'text/html,application/rss+xml,application/atom+xml,application/xml,application/json;q=0.9,*/*;q=0.5' },
+    headers: { 'user-agent': 'StudentAssist-InternshipCollector/1.0 (+official-source-monitor)', accept: 'text/html,application/rss+xml,application/atom+xml,application/xml,application/json;q=0.9,*/*;q=0.5' },
   });
   if (response.status >= 300 && response.status < 400) throw new Error(`Source redirected (HTTP ${response.status}); update the configured official URL.`);
   if (!response.ok) throw new Error(`Source returned HTTP ${response.status}.`);
